@@ -1,0 +1,19 @@
+// Descripciones
+.descripciones
+	background: $Black
+	.grid
+		+fx(all,0.5s)
+		background: $Shark
+		position: relative
+		&:nth-child(odd)
+			+flexDirRow(row-reverse)
+			background: $Tuna
+	.multimedia
+		margin: 0px -0.5rem
+	.info
+		+bx
+		padding: 0px 20px
+		display: table
+		width: 100%
+		h1, h2, h3, h4, h5, h6, p
+			color: $White

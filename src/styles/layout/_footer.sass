@@ -1,0 +1,26 @@
+.footer
+	background: $Black
+	overflow: hidden
+	position: relative
+	width: 100%
+	h6
+		color: $White
+	li
+		a
+			font-size: 0.75rem
+			color: $White
+			font-weight: 500
+			&:hover
+				text-decoration: underline	
+.legales
+	background: $Razzmatazz
+	margin-top: 1rem
+	p
+		color: $White
+		font-weight: 500
+
+@mixin ndFooter-smartphone
+	.footer
+		.legales
+			p
+				text-align: center

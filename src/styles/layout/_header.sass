@@ -1,0 +1,104 @@
+.header
+	+shadow
+	background: $Razzmatazz
+	position: relative
+	.menu
+		+flex
+	nav
+		+flex
+		margin: 0px auto
+		ul
+			display: table
+			height: 100%
+			width: 100%
+			li
+				display: table
+				float: left
+				height: 100%
+				&:hover, &.current_page_item
+					a
+						&:before
+							background: $White
+							width: 100%
+				a
+					+fx(all,0.5s)
+					color: $White
+					display: table-cell
+					font-size: 0.75rem
+					font-weight: 700
+					padding: 0px 1rem
+					position: relative
+					text-align: center
+					text-decoration: none
+					vertical-align: middle
+					&:before
+						+center(v)
+						+fx(all,0.5s)
+						background: transparent
+						bottom: 0px
+						content: " "
+						display: block
+						height: 3px
+						width: 0%
+	// .controles
+	// 	margin: auto 0px
+	// 	display: table
+	.controles
+		+alignItem
+		+flex
+		+flexWrap
+		+justifyCont
+		[class^="icon-"], [class*=" icon-"]
+			margin: 0px 0.5rem
+			color: $White
+	.settings
+		margin-left: 0.5rem
+		[class^="icon-"], [class*=" icon-"]
+			color: $White
+			margin: 0px
+		button
+			font-size: 0.5rem
+			&:hover
+				color: $Black
+			&.inactivo
+				cursor: default
+				&:hover
+					color: $White
+
+@mixin ndHeader-smartphone
+	.header
+		.menu
+			display: block
+		nav
+			display: none
+			ul
+				+flex
+				+flexDir
+				height: calc(100vh - 68px)
+				li
+					+alignItem
+					+flex
+					border-bottom: 1px solid $Mercury
+					float: none
+					overflow: hidden
+					position: relative
+					max-height: 75px
+					&:hover, &.current_page_item
+						a
+							&:before
+								width: 0px
+					&:last-of-type
+						border-bottom: none
+					a
+						display: block
+						padding: 29px 0px
+						position: static
+						text-align: inherit
+						width: 100%
+		.controles
+			margin: 35px -0.5rem
+			position: absolute
+			right: 20px
+			top: 0px
+		.settings
+			display: none
