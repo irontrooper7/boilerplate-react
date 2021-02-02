@@ -1,6 +1,5 @@
 // Acordeon
 .acordeon
-	// background: $Razzmatazz
 	overflow: hidden
 	padding-bottom: 1.25rem
 	position: relative
@@ -9,16 +8,16 @@
 		margin-bottom: 1.25rem
 		overflow: hidden
 	dt
-		background: $Razzmatazz
+		background: $colPrim1
 		cursor: pointer
 		overflow: hidden
 		h3, h4, h5, h6
-			color: $White
+			color: $colSec2
 			padding-left: 32px
 			position: relative
 			&:before
 				+center(h)
-				background: $White
+				background: $colSec2
 				content: ""
 				height: 5px
 				left: 0px
@@ -26,7 +25,7 @@
 			&:after
 				+center(h)
 				+fawesome('\f067')
-				color: $White
+				color: $colSec2
 				cursor: pointer
 				font-size: 11px
 				right: 0px
