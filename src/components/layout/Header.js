@@ -1,47 +1,23 @@
-var headerOptions = [
-    {
-        id: 1,
-        name: 'Opcion 1',
-        url: 'google.com'
-    },
-    {
-        id: 2,
-        name: 'Opcion 2',
-        url: 'google.com'
-    },
-    {
-        id: 3,
-        name: 'Opcion 3',
-        url: 'google.com'
-    },
-    {
-        id: 4,
-        name: 'Opcion 4',
-        url: 'google.com'
-    }
-]
+import React from "react"
+import { Link } from "react-router-dom"
 
-const Header = (props) => {
-    return (
-        <header className="header">
-            <div className="container">
-                <div className="menu">
-                    <nav>
-                        <ul>
-                            {headerOptions.map((opt) => (
-                                <li key={opt.id}>
-                                    <a href={opt.url}>{opt.name}</a>
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
-                    <button className="hamburguer">
-                        <span></span>
-                    </button>
-                </div>
+const Header = () => (
+    <header className="header">
+        <div className="container">
+            <div className="menu">
+                <nav>
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/form">Formulario</Link></li>
+                        <li><Link to="/gallery">Galeria</Link></li>
+                    </ul>
+                </nav>
+                <button className="hamburguer">
+                    <span></span>
+                </button>
             </div>
-        </header>
-    )
-}
+        </div>
+    </header>
+)
 
 export default Header
